@@ -47,6 +47,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
+      appBar: AppBar(
+        title: const Text("App comment"),
+        backgroundColor: Colors.purple,
+      ),
       body:Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -56,9 +60,11 @@ class _HomeState extends State<Home> {
             )
           ),
           child: Center(
-            child: Column(children: [
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
               Container(
-                padding: const EdgeInsets.only(top: 130, bottom: 20),
+                padding: const EdgeInsets.only(top: 50, bottom: 20),
                 child:Text(
                   'Comment\nSearch',
                   style: titleStyle,
@@ -93,24 +99,23 @@ class _HomeState extends State<Home> {
     TextStyle contentStyle = GoogleFonts.openSans(fontWeight: FontWeight.w400);
 
     return SizedBox(
-      width: 220,
-      height: 230,
+      width: 260,
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(color: Colors.transparent),
-            borderRadius: BorderRadius.circular(10)),
+            borderRadius: BorderRadius.circular(10)
+            ),
         child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Column(children: [
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
               SizedBox(
-                  width: 220,
-                  height: 60,
                   child: AutoSizeText(
-                    maxLines: 2,
-                    body,
-                    style: nameStyle,
+                    'body: $body',
+                    style: contentStyle,
                     textAlign: TextAlign.justify,
                   )),
               Padding(
@@ -118,7 +123,8 @@ class _HomeState extends State<Home> {
                 child: Text(
                   'Nome: $name',
                   style: contentStyle,
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.justify,
+                  
                 ),
               ),
               Padding(
@@ -126,7 +132,7 @@ class _HomeState extends State<Home> {
                 child: Text(
                   'Email: $email',
                   style: contentStyle,
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.left,                  
                 ),
               ),
             ])),
