@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
                 child: Text(
                   'Email: $email',
                   style: contentStyle,
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.left,                  
                 ),
               ),
             ])),
