@@ -30,7 +30,9 @@ flutter test
 | Flutter SDK      | >=2.16.2 <3.0.0  |
 | flutter_test     | built in lib |
 |cupertino_icons   | ^1.0.2       |
-| google_fonts     | ^2.3.2      |
+| http:            | ^0.13.5      |
+| auto_size_text:  | ^3.0.0       |
+| google_fonts:    | ^3.0.1       |
 
 
 ## Autores
